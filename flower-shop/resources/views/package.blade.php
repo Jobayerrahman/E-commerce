@@ -18,12 +18,13 @@
                 </tr>
             </thead>
             <tbody>
+                @foreach($selectKey as $item)
                 <tr>
                 <td>
-                    White Flower
+                    {{$item->title}}
                 </td>
-                <td style="width:1000px; height:auto;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</td>
-                <td>$12.12</td>
+                <td>{{$item->description}}</td>
+                <td>${{$item->price}}</td>
                 <td><img class="rounded img-fluid" style="width:100px; height:80px;" src="{{asset('img/white.jpg')}}" alt="" srcset=""> </td>
                 <td>
                     <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
@@ -31,32 +32,7 @@
                     <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
                 </td>
                 </tr>
-                <tr>
-                <td>
-                    White Flower
-                </td>
-                <td style="width:1000px; height:auto;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</td>
-                <td>$12.12</td>
-                <td><img class="rounded img-fluid" style="width:100px; height:80px;" src="{{asset('img/white.jpg')}}" alt="" srcset=""> </td>
-                <td>
-                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                    <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                    <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                </td>
-                </tr>
-                <tr>
-                <td>
-                    White Flower
-                </td>
-                <td style="width:1000px; height:auto;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</td>
-                <td>$12.12</td>
-                <td><img class="rounded img-fluid" style="width:100px; height:80px;" src="{{asset('img/white.jpg')}}" alt="" srcset=""> </td>
-                <td>
-                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                    <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                    <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                </td>
-                </tr>
+                @endforeach
             </tbody>
         </table>
     </div>

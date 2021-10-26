@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\serviceController;
+use App\Http\Controllers\orderController;
+use App\Http\Controllers\packageController;
+use App\Http\Controllers\projectController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,15 +22,7 @@ Route::get('/home', function () {
 Route::get('/', function () {
     return view('index');
 });
-Route::get('/service', function () {
-    return view('service');
-});
-Route::get('/package', function () {
-    return view('package');
-});
-Route::get('/project', function () {
-    return view('project');
-});
-Route::get('/order', function () {
-    return view('order');
-});
+Route::get('/service',[serviceController::class,'onSelect']);
+Route::get('/package',[packageController::class,'onSelect']);
+Route::get('/project',[projectController::class,'onSelect']);
+Route::get('/order',[orderController::class,'onSelect']);

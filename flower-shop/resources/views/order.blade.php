@@ -22,14 +22,15 @@
                 </tr>
             </thead>
             <tbody>
+                @foreach($selectKey as $item)
                 <tr>
-                <td>1</td>
-                <td>Flower pot</td>
-                <td>Lorem Ipsum</td>
-                <td>0145899998 </td>
-                <td>LoremIpsum@gmail.com</td>
-                <td>0145899998 </td>
-                <td>0AU56IM9GIZXX</td>
+                <td>{{$item->id}}</td>
+                <td>{{$item->order_name}}</td>
+                <td>{{$item->customer_name}}</td>
+                <td>{{$item->mobile_number}}</td>
+                <td>{{$item->email}}</td>
+                <td>{{$item->bkash_number}}</td>
+                <td>{{$item->trx_ID}}</td>
                 <td><span class="label label-info label-mini">Due</span></td>
                 <td>
                     <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
@@ -37,66 +38,7 @@
                     <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
                 </td>
                 </tr>
-                <tr>
-                <td>1</td>
-                <td>Flower pot</td>
-                <td>Lorem Ipsum</td>
-                <td>0145899998 </td>
-                <td>LoremIpsum@gmail.com</td>
-                <td>0145899998 </td>
-                <td>0AU56IM9GIZXX</td>
-                <td><span class="label label-info label-mini">Due</span></td>
-                <td>
-                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                    <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                    <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                </td>
-                </tr>
-                <tr>
-                <td>1</td>
-                <td>Flower pot</td>
-                <td>Lorem Ipsum</td>
-                <td>0145899998 </td>
-                <td>LoremIpsum@gmail.com</td>
-                <td>0145899998 </td>
-                <td>0AU56IM9GIZXX</td>
-                <td><span class="label label-info label-mini">Due</span></td>
-                <td>
-                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                    <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                    <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                </td>
-                </tr>
-                <tr>
-                <td>1</td>
-                <td>Flower pot</td>
-                <td>Lorem Ipsum</td>
-                <td>0145899998 </td>
-                <td>LoremIpsum@gmail.com</td>
-                <td>0145899998 </td>
-                <td>0AU56IM9GIZXX</td>
-                <td><span class="label label-info label-mini">Due</span></td>
-                <td>
-                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                    <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                    <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                </td>
-                </tr>
-                <tr>
-                <td>1</td>
-                <td>Flower pot</td>
-                <td>Lorem Ipsum</td>
-                <td>0145899998 </td>
-                <td>LoremIpsum@gmail.com</td>
-                <td>0145899998 </td>
-                <td>0AU56IM9GIZXX</td>
-                <td><span class="label label-info label-mini">Due</span></td>
-                <td>
-                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                    <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                    <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                </td>
-                </tr>
+                @endforeach
             </tbody>
         </table>
     </div>
